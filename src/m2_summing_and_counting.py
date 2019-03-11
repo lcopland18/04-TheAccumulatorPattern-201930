@@ -34,7 +34,7 @@ def main():
 def run_test_sum_more_cosines():
     """ Tests the   sum_more_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # DONE: 2. Implement this TEST function.
     #   It TESTS the  sum_more_cosines  function defined below.
     #   Include at least **   3   ** tests (we wrote one for you).
     #
@@ -69,6 +69,14 @@ def run_test_sum_more_cosines():
     else:
         print('       actual:  ', answer)
 
+
+
+    # -------------------------------------------------------------------------
+    # TODO: 2 (continued).
+    # Below this comment, add 2 more test cases of your own choosing.
+    # -------------------------------------------------------------------------
+
+    #Test 2
     expected = 0.54  # This is APPROXIMATELY the correct answer.
     answer = sum_more_cosines(1,1)
     print('Test 2 expected:', expected, '(approximately)')
@@ -78,20 +86,15 @@ def run_test_sum_more_cosines():
     else:
         print('       actual:  ', answer)
 
-    expected = 0.02082  # This is APPROXIMATELY the correct answer.
-    answer = sum_more_cosines(-4, 1)
+    #Test 3
+    expected = 1.5403  # This is APPROXIMATELY the correct answer.
+    answer = sum_more_cosines(0, 1)
     print('Test 3 expected:', expected, '(approximately)')
 
     if answer is not None:
         print('       actual:  ', round(answer, 5))
     else:
         print('       actual:  ', answer)
-
-    # -------------------------------------------------------------------------
-    # TODO: 2 (continued).
-    # Below this comment, add 2 more test cases of your own choosing.
-    # -------------------------------------------------------------------------
-
 
 def sum_more_cosines(m, n):
     """
@@ -108,7 +111,7 @@ def sum_more_cosines(m, n):
          which is approximately 0.02082.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -121,9 +124,9 @@ def sum_more_cosines(m, n):
     # -------------------------------------------------------------------------
 
     total = 0
-    for k in range(n+1):
-        total = total + (math.cos(m))
-        m = m + 1
+    for k in range(abs(n)-abs(m)+1):
+        total = total + (math.cos(m+k))
+
 
     return total
 
