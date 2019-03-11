@@ -206,7 +206,7 @@ def count_sines_from(m, n):
       -- count_sines_from(9, 9)  returns  1
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -245,6 +245,37 @@ def run_test_count_sines_vs_cosines():
     # TODO: 6 (continued).
     # Below this comment, add 5 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+
+ # Test 2:
+    expected =
+    answer = count_sines_vs_cosines()
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+ # Test 3:
+    expected =
+    answer = count_sines_vs_cosines()
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+ # Test 4:
+    expected =
+    answer = count_sines_vs_cosines()
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
+
+ # Test 5:
+    expected =
+    answer = count_sines_vs_cosines()
+    print('Test 5 expected:', expected)
+    print('       actual:  ', answer)
+
+ # Test 6:
+    expected =
+    answer = count_sines_vs_cosines()
+    print('Test 6 expected:', expected)
+    print('       actual:  ', answer)
+
 
 
 def count_sines_vs_cosines(m):
