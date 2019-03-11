@@ -10,7 +10,7 @@ before you can implement a solution to the problem in Python.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
          Aaron Wilkin, their colleagues, and Lauren Copland.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -113,7 +113,14 @@ def draw_parallel_lines(n, point, length, window):
 #Point length window
 
     for k in range(n):
+        right_most_point = rg.Point(point.x + length,point.y)
 
+        line = rg.Line(point,right_most_point)
+        line.attach_to(window)
+
+        point.y = point.y + 30
+        right_most_point.y = right_most_point.y + 30
+    window.render()
 
 def run_test_draw_lines():
     """ Tests the   draw_lines  function. """
