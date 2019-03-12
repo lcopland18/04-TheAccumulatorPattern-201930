@@ -124,6 +124,7 @@ def sum_from(m, n):
     #   you must NOT use the 2 or 3-parameter versions
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
+    for k in range(m,n+1):
 
 
 def run_test_factorial():
