@@ -125,7 +125,7 @@ def sum_from(m, n):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
     for k in range(m,n+1):
-
+        sum
 
 def run_test_factorial():
     """ Tests the   factorial   function. """
