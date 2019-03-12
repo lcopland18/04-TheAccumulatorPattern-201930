@@ -132,7 +132,7 @@ def sum_from(m, n):
 def run_test_factorial():
     """ Tests the   factorial   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  factorial  function defined below.
     #   Include at least **   5   ** tests (we wrote two for you).
     #
@@ -166,20 +166,20 @@ def run_test_factorial():
     # -------------------------------------------------------------------------
 
     # Test 3:
-    answer_from_oracle = math.factorial(21)
-    answer_from_my_code = factorial(21)
+    answer_from_oracle = math.factorial(1)
+    answer_from_my_code = factorial(1)
     print('Test 3 expected (from oracle):', answer_from_oracle)
     print('       actual (from my code): ', answer_from_my_code)
 
     # Test 4:
-    answer_from_oracle = math.factorial(21)
-    answer_from_my_code = factorial(21)
+    answer_from_oracle = math.factorial(3)
+    answer_from_my_code = factorial(3)
     print('Test 4 expected (from oracle):', answer_from_oracle)
     print('       actual (from my code): ', answer_from_my_code)
 
     # Test 5:
-    answer_from_oracle = math.factorial(21)
-    answer_from_my_code = factorial(21)
+    answer_from_oracle = math.factorial(4)
+    answer_from_my_code = factorial(4)
     print('Test 5 expected (from oracle):', answer_from_oracle)
     print('       actual (from my code): ', answer_from_my_code)
 
@@ -199,6 +199,9 @@ def factorial(n):
     # IMPORTANT:  Your solution MUST
     #   use an explicit    for ... in range(...):     statement.
     # -------------------------------------------------------------------------
+
+    total = 0
+    for k in range(n):
 
 
 def run_test_count_cosines_from():
