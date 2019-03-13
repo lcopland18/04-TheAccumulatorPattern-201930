@@ -143,6 +143,30 @@ def run_test_draw_circles_from_rectangle():
     ###########################################################################
     # -------------------------------------------------------------------------
 
+    window1 = rg.RoseWindow(720,500)
+
+    rectangle1 = rg.Rectangle(rg.Point(400,250),rg.Point(440,325))
+    rectangle1.fill_color = "green"
+    rectangle1.outline_thickness = 5
+    draw_circles_from_rectangle(4,5,rectangle1,window1)
+
+    rectangle2 = rg.Rectangle(rg.Point(500,450), rg.Point(600, 400))
+    rectangle2.fill_color = "blue"
+    rectangle2.outline_thickness = 3
+    rectangle2.outline_color = "blue"
+    draw_circles_from_rectangle(4, 5, rectangle2, window1)
+
+    window1.close_on_mouse_click()
+
+    window2 = rg.RoseWindow(620,380)
+
+    rectangle3 = rg.Rectangle(rg.Point(250, 280), rg.Point(375, 330))
+    rectangle3.fill_color = "yellow"
+    rectangle3.outline_color = "brown"
+    rectangle3.outline_thickness = 5
+    draw_circles_from_rectangle(4, 5, rectangle3, window2)
+
+    window2.close_on_mouse_click()
 
 def draw_circles_from_rectangle(m, n, rectangle, window):
     """
@@ -198,6 +222,25 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
     ###########################################################################
     # -------------------------------------------------------------------------
 
+    width = abs(rectangle.corner_1.x-rectangle.corner_2.x)
+    length = abs(rectangle.corner_1.y-rectangle.corner_2.y)
+    center_rectangle = rg.Point(((rectangle.corner_1.x+abs(rectangle.corner_1.x-rectangle.corner_2.x)/2)),rectangle.corner_1.y+abs((rectangle.corner_1.y-rectangle.corner_2.y)/2))
+    left_circle = rg.Circle((rg.Point(rectangle.corner_1.x-(rectangle.corner_1.x-rectangle.corner_2.x),center_rectangle.y)),(rectangle.width)/2)
+    left_circle.fill_color = rectangle.fill_color
+
+    top_circle = rg.Circle(rg.Point(center_rectangle))
+    top_cirlce.outline_color = rectangle.outline_color
+
+    for k in range(n):
+        left_cirlce.center = rg.point(left_circle.center.x-left_circle.radius)
+        attach.left_circle(window)
+
+#    for k in range(m):
+#
+#        attach.top_circle
+
+
+    window.render()
 
 def run_test_draw_lines_from_rectangles():
     """ Tests the   draw_lines_from_rectangles  function. """
