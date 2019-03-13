@@ -90,7 +90,7 @@ def run_test_sum_from():
     print('       actual (from my code):  ', answer_from_my_code)
 
 # -----------------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #   When you have READ the above  run_test_sum_from  function,
 #   asking questions as needed, and you feel that you (mostly, at least)
 #   understand it, and you feel that you understand from the example:
@@ -317,7 +317,7 @@ def count_cosines_from(m, n, x):
 def run_test_sum_unit_fractions_from():
     """ Tests the   sum_unit_fractions_from   function. """
     # -------------------------------------------------------------------------
-    # TODO: 8. Implement this TEST function.
+    # DONE: 8. Implement this TEST function.
     #   It TESTS the  sum_unit_fractions_from  function defined below.
     #   Include at least **   3   ** tests (we wrote one for you).
     # Use the same 4-step process as for previous TEST functions.
@@ -333,10 +333,25 @@ def run_test_sum_unit_fractions_from():
     print('Test 1 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
+
+
     # -------------------------------------------------------------------------
     # TO DO: 8 (continued).
     # Below this comment, add 2 more test cases of your own choosing.
     # -------------------------------------------------------------------------
+
+    # Test 2:
+    expected = 1.5 # This is APPROXIMATELY the correct answer.
+    answer = sum_unit_fractions_from(1,2)
+    print('Test 2 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
+    # Test 3:
+    expected = 6.853 # This is APPROXIMATELY the correct answer.
+    answer = sum_unit_fractions_from(10,9000)
+    print('Test 3 expected:', expected, '(approximately)')
+    print('       actual:  ', answer)
+
 
 
 def sum_unit_fractions_from(m, n):
@@ -352,7 +367,7 @@ def sum_unit_fractions_from(m, n):
       -- sum_unit_fractions_from(10, 9000)  returns about  6.853
     """
     # -------------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     # IMPORTANT: As in previous problems in this session,
@@ -360,6 +375,10 @@ def sum_unit_fractions_from(m, n):
     #   of the RANGE expression, if you happen to know them.
     # -------------------------------------------------------------------------
 
+    total = 0
+    for k in range((abs(n)-abs(m))+1):
+        total = total + (1/(m+k))
+    return total
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
