@@ -225,15 +225,15 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
     width = abs(rectangle.corner_1.x-rectangle.corner_2.x)
     length = abs(rectangle.corner_1.y-rectangle.corner_2.y)
     center_rectangle = rg.Point(((rectangle.corner_1.x+abs(rectangle.corner_1.x-rectangle.corner_2.x)/2)),rectangle.corner_1.y+abs((rectangle.corner_1.y-rectangle.corner_2.y)/2))
-    left_circle = rg.Circle((rg.Point(rectangle.corner_1.x-(rectangle.corner_1.x-rectangle.corner_2.x),center_rectangle.y)),(rectangle.width)/2)
+    left_circle = rg.Circle((rg.Point(rectangle.corner_1.x-(rectangle.corner_1.x-rectangle.corner_2.x),center_rectangle.y)),width/2)
     left_circle.fill_color = rectangle.fill_color
 
-    top_circle = rg.Circle(rg.Point(center_rectangle))
-    top_cirlce.outline_color = rectangle.outline_color
+    #top_circle = rg.Circle(rg.Point(center_rectangle))
+    #top_cirlce.outline_color = rectangle.outline_color
 
     for k in range(n):
-        left_cirlce.center = rg.point(left_circle.center.x-left_circle.radius)
-        attach.left_circle(window)
+        left_circle.center = rg.Point(left_circle.center.x-2*left_circle.radius,left_circle.center.y)
+        left_circle.attach_to(window)
 
 #    for k in range(m):
 #
