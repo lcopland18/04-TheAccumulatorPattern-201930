@@ -224,7 +224,8 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
 
     width = abs(rectangle.corner_1.x-rectangle.corner_2.x)
     length = abs(rectangle.corner_1.y-rectangle.corner_2.y)
-    rectangle_center =
+
+    rectangle_center = rectangle_corner
 
     #width = abs(rectangle.corner_1.x-rectangle.corner_2.x)
     #length = abs(rectangle.corner_1.y-rectangle.corner_2.y)
