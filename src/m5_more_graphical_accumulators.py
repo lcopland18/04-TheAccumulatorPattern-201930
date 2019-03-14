@@ -160,11 +160,11 @@ def run_test_draw_circles_from_rectangle():
 
     window2 = rg.RoseWindow(620,380)
 
-    rectangle3 = rg.Rectangle(rg.Point(250, 280), rg.Point(375, 330))
+    rectangle3 = rg.Rectangle(rg.Point(350, 280), rg.Point(375, 330))
     rectangle3.fill_color = "yellow"
     rectangle3.outline_color = "brown"
     rectangle3.outline_thickness = 5
-    draw_circles_from_rectangle(6, 5, rectangle3, window2)
+    draw_circles_from_rectangle(6, 10, rectangle3, window2)
 
     window2.close_on_mouse_click()
 
@@ -234,6 +234,11 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
         circle.attach_to(window)
         window.render(0.5)
 
+    for k in range(n):
+        circle2 = rg.Circle(rg.Point(rectangle.get_center().x , rectangle.get_center().y - ((length / 2) + (k*(width)))-(width/2)),width / 2)
+        circle2.outline_color = rectangle.outline_color
+        circle2.attach_to(window)
+        window.render(0.5)
 
 
 def run_test_draw_lines_from_rectangles():
