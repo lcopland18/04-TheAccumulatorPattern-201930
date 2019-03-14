@@ -153,8 +153,8 @@ def run_test_draw_circles_from_rectangle():
     rectangle2 = rg.Rectangle(rg.Point(500,450), rg.Point(600, 400))
     rectangle2.fill_color = "blue"
     rectangle2.outline_thickness = 3
-    rectangle2.outline_color = "blue"
-    draw_circles_from_rectangle(4, 5, rectangle2, window1)
+    rectangle2.outline_color = "red"
+    draw_circles_from_rectangle(8, 3, rectangle2, window1)
 
     window1.close_on_mouse_click()
 
@@ -164,7 +164,7 @@ def run_test_draw_circles_from_rectangle():
     rectangle3.fill_color = "yellow"
     rectangle3.outline_color = "brown"
     rectangle3.outline_thickness = 5
-    draw_circles_from_rectangle(4, 5, rectangle3, window2)
+    draw_circles_from_rectangle(6, 5, rectangle3, window2)
 
     window2.close_on_mouse_click()
 
