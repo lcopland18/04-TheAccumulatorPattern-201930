@@ -232,13 +232,15 @@ def draw_circles_from_rectangle(m, n, rectangle, window):
         circle = rg.Circle(rg.Point(rectangle.get_center().x - ((width / 2) + (k*(length)))-(length/2), rectangle.get_center().y),length / 2)
         circle.fill_color = rectangle.fill_color
         circle.attach_to(window)
-        window.render(0.5)
+        #window.render(0.5)
 
     for k in range(n):
         circle2 = rg.Circle(rg.Point(rectangle.get_center().x , rectangle.get_center().y - ((length / 2) + (k*(width)))-(width/2)),width / 2)
         circle2.outline_color = rectangle.outline_color
         circle2.attach_to(window)
-        window.render(0.5)
+        #window.render(0.5)
+
+    window.render()
 
 
 def run_test_draw_lines_from_rectangles():
@@ -332,6 +334,18 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     ###########################################################################
     # -------------------------------------------------------------------------
 
+    rectangle1.attach_to(window)
+    rectangle2.attach_to(window)
+    window.render()
+
+    print(n//2 + n%2)
+    print(n//2)
+
+  #  for k in range(n/2 + n%2):
+        #line = rg.Line(rg.Point(100,100),rg.Point(100,200))
+
+   # for k in range(n/2):
+        #line = rg.Lin
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
