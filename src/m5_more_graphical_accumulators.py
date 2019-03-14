@@ -344,12 +344,20 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     width2 = abs(rectangle2.corner_1.x - rectangle2.corner_2.x)
     length2 = abs(rectangle2.corner_1.y - rectangle2.corner_2.y)
 
-    line = rg.Line(rg.Point(rectangle1.get_center().x,rectangle1.get_center().y),rg.Point(rectangle2.get_center().x,rectangle2.get_center().y))
-    line.attach_to(window)
-    window.render()
+    # line = rg.Line(rg.Point(rectangle1.get_center().x,rectangle1.get_center().y),rg.Point(rectangle2.get_center().x,rectangle2.get_center().y))
+    # line.attach_to(window)
+    #
+    # line2 = rg.Line(rg.Point(rectangle1.get_center().x-(width1/2),rectangle1.get_center().y+(length1/2)),rg.Point(rectangle2.get_center().x-(width1/2),rectangle2.get_center().y+(length1/2)))
+    # line2.attach_to(window)
+    #
+    # window.render()
 
-    #for k in range(n//2 + n%2):
-     #   line = rg.Line(rg.Point(rectangle1.get_center().x, rectangle1.get_center().y),rg.Point(rectangle2.get_center().x, rectangle2.get_center().y))
+    for k in range(n//2 + n%2):
+        line = rg.Line(rg.Point(rectangle1.get_center().x, rectangle1.get_center().y),rg.Point(rectangle2.get_center().x, rectangle2.get_center().y))
+        line.attach_to(window)
+        window.render()
+        line.
+
 
     #for k in range(n//2):
      #   line2 = rg.Line(rg.point())
