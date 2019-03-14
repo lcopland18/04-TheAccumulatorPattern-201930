@@ -349,10 +349,10 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     window.render()
 
     #for k in range(n//2 + n%2):
-     #   line = rg.Line(rg.Point(100,100),rg.Point(100,200))
+     #   line = rg.Line(rg.Point(rectangle1.get_center().x, rectangle1.get_center().y),rg.Point(rectangle2.get_center().x, rectangle2.get_center().y))
 
-   #for k in range(n//2):
-    #    line2 = rg.Line(rg.point())
+    #for k in range(n//2):
+     #   line2 = rg.Line(rg.point())
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
