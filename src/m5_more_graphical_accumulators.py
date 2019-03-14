@@ -344,9 +344,9 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
     width2 = abs(rectangle2.corner_1.x - rectangle2.corner_2.x)
     length2 = abs(rectangle2.corner_1.y - rectangle2.corner_2.y)
 
-    line = rg.Line(rg.Point(rectangle1.get_center().x,rectangle1.get_center().y),rg.Point())
+    line = rg.Line(rg.Point(rectangle1.get_center().x,rectangle1.get_center().y),rg.Point(rectangle2.get_center().x,rectangle2.get_center().y))
     line.attach_to(window)
-    window.render
+    window.render()
 
     #for k in range(n//2 + n%2):
      #   line = rg.Line(rg.Point(100,100),rg.Point(100,200))
